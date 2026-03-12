@@ -1,10 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        // Add variables here if needed, like GIT_REPO = 'https://...'
-    }
-
     stages {
         stage('Stage 1 - Name Here') {
             steps {
