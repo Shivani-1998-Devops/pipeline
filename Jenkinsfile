@@ -1,10 +1,9 @@
 pipeline {
     agent any
 
-    environment {
-        tools {
-    maven 'MAVEN'
-}
+  tools {
+        maven 'MAVEN'
+    }
     }
     stages {
         stage('Checkout Code') {
@@ -31,4 +30,3 @@ pipeline {
             echo 'Build failed'
         }
     }
-}
