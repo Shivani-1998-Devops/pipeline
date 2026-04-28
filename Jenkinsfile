@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-  tools {
+    tools {
         maven 'MAVEN'
     }
-    }
+
     stages {
         stage('Checkout Code') {
             steps {
@@ -14,6 +14,7 @@ pipeline {
                     url: 'https://github.com/Shivani-1998-Devops/superlab.git'
             }
         }
+
         stage('Maven Build') {
             steps {
                 echo 'Building project'
@@ -24,9 +25,11 @@ pipeline {
 
     post {
         success {
-            echo 'Build successfull'
+            echo 'Build successful'
         }
+
         failure {
             echo 'Build failed'
         }
     }
+}
