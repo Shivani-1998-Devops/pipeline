@@ -13,7 +13,6 @@ pipeline {
                     url: 'https://github.com/Shivani-1998-Devops/superlab.git'
             }
         }
-
         stage('Maven Build') {
             steps {
                 echo 'Building project'
