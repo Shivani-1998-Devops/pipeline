@@ -2,7 +2,9 @@ pipeline {
     agent any
 
     environment {
-        MAVEN_HOME = tool 'MAVEN'
+        tools {
+    maven 'MAVEN'
+}
     }
     stages {
         stage('Checkout Code') {
