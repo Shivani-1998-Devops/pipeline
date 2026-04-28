@@ -3,10 +3,7 @@ pipeline {
 
     environment {
         MAVEN_HOME = tool 'MAVEN'
-        JAVA_HOME = '/usr/lib/jvm/java-21-openjdk-amd64'
-        PATH = "${JAVA_HOME}/bin:${MAVEN_HOME}/bin:${env.PATH}"
     }
-
     stages {
         stage('Checkout Code') {
             steps {
@@ -14,14 +11,6 @@ pipeline {
                 git credentialsId: 'my-private-repo-creds',
                     branch: 'main',
                     url: 'https://github.com/Shivani-1998-Devops/superlab.git'
-            }
-        }
-
-        stage('Check Java') {
-            steps {
-                sh 'java -version'
-                sh 'javac -version'
-                sh 'echo $JAVA_HOME'
             }
         }
 
